@@ -1,3 +1,26 @@
+// Данные для отображения карточки
+export interface ICard extends IProduct{
+  index?: string;
+  buttonTitle? : string;
+}
+
+// Данные для отображения корзиный
+export interface IBasketView {
+  items: HTMLElement[];
+  total: number;
+}
+
+// Данный для отображения главной страницы
+export interface IPage{
+  counter: number;
+  catalog: HTMLElement[];
+}
+
+//Данные для отображения успешного заказа
+export interface ISuccess {
+  total: number;
+}
+
 // Типы для реализации базового класса Events
 export type EventName = string | RegExp;
 export type Subscriber = Function;
@@ -28,7 +51,7 @@ export interface IFormState {
     errors: string[];
 }
 
-// Данные контента для отрисовки внутри Модалки
+// Данные контента модальных окон
 export interface IModalData {
     content: HTMLElement;
 }
@@ -87,28 +110,6 @@ export interface IOrderResult {
 // Ошибки Форм
 export type FormErrors = Partial<Record<keyof IOrder, string>>;
 
-// Данные для отображения карточки
-export interface ICard extends IProduct{
-  index?: string;
-  buttonTitle? : string;
-}
-
-// Данные для отображения корзиный
-export interface IBasketView {
-  items: HTMLElement[];
-  total: number;
-}
-
-// Данный для отображения главной страницы
-export interface IPage{
-  counter: number;
-  catalog: HTMLElement[];
-}
-
-//Данные для отображения успешного заказа
-export interface ISuccess {
-  total: number;
-}
 
 // Действия передаваемые в конструктор
 export interface IActions {
