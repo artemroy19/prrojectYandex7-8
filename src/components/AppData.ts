@@ -107,7 +107,7 @@ export class AppState extends Model<IAppState> {
     if (!this.order.phone) {
       errors.phone = 'Необходимо указать телефон';
     } else if (!/^\+7\d{10}$/.test(this.order.phone)) {
-      errors.phone = 'Телефон должен начинаться с +7 и содержать 11 цифр';
+      errors.phone = 'Введён некорректный номер телефона';
     }
     
     this.formErrors = errors;
